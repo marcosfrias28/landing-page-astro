@@ -1,15 +1,22 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import cLogo from "../../public/images/logo.svg";
+import Google from "../../public/images/logo-google.png";
+import HP from "../../public/images/logo-hp.png";
+import IBM from "../../public/images/logo-ibm.png";
+import Microsoft from "../../public/images/logo-microsoft.png";
+import VectorGraphics from "../../public/images/logo-vector-graphics.png";
 import imgComputer from "../../public/images/image-computer.png";
 import imgDevices from "../../public/images/image-devices.png";
 import iconBlackList from "../../public/images/icon-blacklist.svg";
+import iconFacebook from "../../public/images/icon-facebook.svg";
+import iconTwitter from "../../public/images/icon-twitter.svg";
+import iconInstagram from "../../public/images/icon-instagram.svg";
 import iconText from "../../public/images/icon-text.svg";
 import iconPreview from "../../public/images/icon-preview.svg";
 import Heading from "../components/Heading.astro";
 import { Image } from "astro:assets";
 import ActionSection from "../components/ActionSection.astro";
-
 ---
 
 <Layout title="Welcome to Astro.">
@@ -19,7 +26,7 @@ import ActionSection from "../components/ActionSection.astro";
   >
   </div>
   <main
-    class="text-center text-balance max-w-[375px] md:max-w-[1440px] mx-auto my-0font-Baijamjuree px-7"
+    class="text-center text-balance max-w-[375px] md:max-w-[1440px] mx-auto my-0 px-7"
   >
     <section class="mb-20 mt-32">
       <Image
@@ -102,9 +109,19 @@ import ActionSection from "../components/ActionSection.astro";
         description="Quick preview of all snippets on your Clipboard for easy access."
       />
     </section>
-    <div>
-
-    </div>
+    <company-logos
+      class="my-32 flex flex-col justify-center items-center gap-20"
+    >
+      <Image loading="lazy" src={Google} alt="Company logo: Google" />
+      <Image loading="lazy" src={IBM} alt="Company logo: IBM" />
+      <Image loading="lazy" src={Microsoft} alt="Company logo: Microsoft" />
+      <Image loading="lazy" src={HP} alt="Company logo: HP" />
+      <Image
+        loading="lazy"
+        src={VectorGraphics}
+        alt="Company logo: VectorGraphics"
+      />
+    </company-logos>
     <section class="mb-20 mt-32">
       <Heading
         title="Clipboard for iOS and Mac OS"
@@ -115,27 +132,38 @@ import ActionSection from "../components/ActionSection.astro";
       <ActionSection />
     </section>
   </main>
-  <footer class="bg-aluminium-300">
-    <a href="#faqs">FAQs</a>
-    <a href="#contact">Contact Us</a>
-    <a href="#privacy">Privacy Policy</a>
-    <a href="#kit">Press Kit</a>
-    <a href="#guide">Install Guide</a>
-    <p class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Marcos Frias Molina</a>.
-    </p>
+  <footer
+    class="bg-aluminium-100 flex flex-col flex-wrap justify-center items-center py-10 gap-10"
+  >
+    <Image
+      class="mx-auto w-16"
+      loading="eager"
+      src={cLogo}
+      alt="Logo C color Cyan"
+    />
+    <nav
+      class="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-6 justify-center items-center text-aluminium-700"
+    >
+      <a href="#faqs">FAQs</a>
+      <a href="#contact">Contact Us</a>
+      <a href="#privacy">Privacy Policy</a>
+      <a href="#kit">Press Kit</a>
+      <a href="#guide">Install Guide</a>
+    </nav>
+    <div class="flex gap-6">
+      <Image src={iconFacebook} alt="Facebook Logo SVG" />
+      <Image src={iconTwitter} alt="Twitter Old Logo SVG" />
+      <Image src={iconInstagram} alt="Instagram Logo SVG" />
+    </div>
   </footer>
-</Layout>
 
-<style>
-  .attribution {
-    font-size: 11px;
-    text-align: center;
-  }
-  .attribution a {
-    color: hsl(228, 45%, 44%);
-  }
-</style>
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</Layout>
