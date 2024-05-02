@@ -1,12 +1,13 @@
 ---
-import { Image } from "astro:assets";
+import Image from "../components/Image.astro";
+
 interface Props {
-  logo?: ImageMetadata;
+  logo?: string;
   alt?: string;
   loading?: "eager" | "lazy";
   title: string;
   description: string;
-  titleSize: "xl" | "2xl" | "3xl" | "4xl";
+  titleSize: string;
 }
 
 const { logo, alt, loading, title, description, titleSize } = Astro.props;
@@ -15,16 +16,11 @@ const { logo, alt, loading, title, description, titleSize } = Astro.props;
 <article>
   {
     logo && (
-      <Image
-        loading={loading}
-        class:list={"my-0 mx-auto my-5"}
-        src={logo}
-        alt={alt}
-      />
+      <Image loading={loading} className="mx-auto my-5" src={logo} alt={alt} />
     )
   }
   <h2
-    class:list={`font-medium text-nandor-900 text-balance mb-4 text-${titleSize}`}
+    class:list={`font-medium text-nandor-900 text-balance mb-4 text-[${titleSize}]`}
   >
     {title}
   </h2>

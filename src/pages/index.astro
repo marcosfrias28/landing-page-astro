@@ -1,28 +1,28 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import cLogo from "../../public/images/logo.svg";
-import Google from "../../public/images/logo-google.png";
-import HP from "../../public/images/logo-hp.png";
-import IBM from "../../public/images/logo-ibm.png";
-import Microsoft from "../../public/images/logo-microsoft.png";
-import VectorGraphics from "../../public/images/logo-vector-graphics.png";
-import imgComputer from "../../public/images/image-computer.png";
-import imgDevices from "../../public/images/image-devices.png";
-import iconBlackList from "../../public/images/icon-blacklist.svg";
-import iconFacebook from "../../public/images/icon-facebook.svg";
-import iconTwitter from "../../public/images/icon-twitter.svg";
-import iconInstagram from "../../public/images/icon-instagram.svg";
-import iconText from "../../public/images/icon-text.svg";
-import iconPreview from "../../public/images/icon-preview.svg";
+import cLogo from "/public/logo.svg";
+import Google from "/public/logo-google.png";
+import HP from "/public/logo-hp.png";
+import IBM from "/public/logo-ibm.png";
+import Microsoft from "/public/logo-microsoft.png";
+import VectorGraphics from "/public/logo-vector-graphics.png";
+import imgComputer from "/public/image-computer.png";
+import imgDevices from "/public/image-devices.png";
+import iconBlackList from "/public/icon-blacklist.svg";
+import iconFacebook from "/public/icon-facebook.svg";
+import iconTwitter from "/public/icon-twitter.svg";
+import iconInstagram from "/public/icon-instagram.svg";
+import iconText from "/public/icon-text.svg";
+import iconPreview from "/public/icon-preview.svg";
 import Heading from "../components/Heading.astro";
-import { Image } from "astro:assets";
 import ActionSection from "../components/ActionSection.astro";
+import Image from "../components/Image.astro";
 ---
 
 <Layout title="Welcome to Astro.">
   <div
     aria-label="Background Image"
-    class="absolute inset-0 -z-10 bg-contain bg-[url(../../public/images/bg-header-mobile.png)] sm:bg-[url(../../public/images/bg-header-desktop.png)] bg-no-repeat"
+    class="absolute inset-0 -z-10 bg-contain bg-[url(/images/bg-header-mobile.png)] sm:bg-[url(/images/bg-header-desktop.png)] bg-no-repeat"
   >
   </div>
   <main
@@ -30,14 +30,15 @@ import ActionSection from "../components/ActionSection.astro";
   >
     <section class="mb-20 mt-32">
       <Image
-        class="mx-auto mb-10"
+        className="mx-auto mb-10"
         loading="eager"
-        src={cLogo}
+        src="/logo.svg"
         alt="Logo C color Cyan"
       />
+
       <Heading
         title="A history of everything you copy"
-        titleSize="4xl"
+        titleSize="36px"
         description="Clipboard allows you to track and organize everything you copy. Instantly access your clipboard on all your devices."
       />
 
@@ -53,7 +54,11 @@ import ActionSection from "../components/ActionSection.astro";
       <div
         class="flex flex-row flex-wrap sm:flex-nowrap justify-center items-center"
       >
-        <Image loading="eager" src={imgComputer} alt="Mac model 2017 images" />
+        <Image
+          loading="eager"
+          src="/image-computer.png"
+          alt="Mac model 2017 images"
+        />
         <aside class="flex flex-col w-full items-start">
           <Heading
             title="Quick Search"
@@ -79,7 +84,7 @@ import ActionSection from "../components/ActionSection.astro";
         titleSize="3xl"
         description="Whether you’re on the go, or at your computer, you can access all your Clipboard snippets in a few simple clicks."
       />
-      <Image src={imgDevices} alt="iPhone and iPad images" />
+      <Image src="/image-devices.png" alt="iPhone and iPad images" />
     </section>
     <section class="flex flex-col gap-10">
       <Heading
@@ -88,21 +93,21 @@ import ActionSection from "../components/ActionSection.astro";
         description="We’ve got the tools to boost your productivity."
       />
       <Heading
-        logo={iconBlackList}
+        logo="/icon-blacklist.svg"
         alt="Blacklist Icon to identify the section"
         title="Create blacklists"
         titleSize="2xl"
         description="Ensure sensitive information never makes its way to your clipboard by excluding certain sources."
       />
       <Heading
-        logo={iconText}
+        logo="/icon-text.svg"
         alt="A\ text Icon to identify the section"
         title="Plain text snippets"
         titleSize="2xl"
         description="Remove unwanted formatting from copied text for a consistent look."
       />
       <Heading
-        logo={iconPreview}
+        logo="/icon-preview.svg"
         alt="Sneak preview Icon to identify the section"
         title="Sneak preview"
         titleSize="2xl"
@@ -112,13 +117,17 @@ import ActionSection from "../components/ActionSection.astro";
     <company-logos
       class="my-32 flex flex-col justify-center items-center gap-20"
     >
-      <Image loading="lazy" src={Google} alt="Company logo: Google" />
-      <Image loading="lazy" src={IBM} alt="Company logo: IBM" />
-      <Image loading="lazy" src={Microsoft} alt="Company logo: Microsoft" />
-      <Image loading="lazy" src={HP} alt="Company logo: HP" />
+      <Image src="/logo-google.png" loading="lazy" alt="Company logo: Google" />
+      <Image src="/logo-ibm.png" loading="lazy" alt="Company logo: IBM" />
       <Image
+        src="/logo-microsoft.png"
         loading="lazy"
-        src={VectorGraphics}
+        alt="Company logo: Microsoft"
+      />
+      <Image src="/logo-hp.png" loading="lazy" alt="Company logo: HP" />
+      <Image
+        src="/logo-vector-graphics.png"
+        loading="lazy"
         alt="Company logo: VectorGraphics"
       />
     </company-logos>
@@ -136,9 +145,9 @@ import ActionSection from "../components/ActionSection.astro";
     class="bg-aluminium-100 flex flex-col flex-wrap justify-center items-center py-10 gap-10"
   >
     <Image
-      class="mx-auto w-16"
+      className="mx-auto w-16"
       loading="eager"
-      src={cLogo}
+      src="/logo.svg"
       alt="Logo C color Cyan"
     />
     <nav
@@ -151,19 +160,17 @@ import ActionSection from "../components/ActionSection.astro";
       <a href="#guide">Install Guide</a>
     </nav>
     <div class="flex gap-6">
-      <Image src={iconFacebook} alt="Facebook Logo SVG" />
-      <Image src={iconTwitter} alt="Twitter Old Logo SVG" />
-      <Image src={iconInstagram} alt="Instagram Logo SVG" />
+      <Image loading="lazy" src="/icon-facebook.svg" alt="Facebook Logo SVG" />
+      <Image
+        loading="lazy"
+        src="/icon-twitter.svg"
+        alt="Twitter Old Logo SVG"
+      />
+      <Image
+        loading="lazy"
+        src="/icon-instagram.svg"
+        alt="Instagram Logo SVG"
+      />
     </div>
   </footer>
-
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
 </Layout>
