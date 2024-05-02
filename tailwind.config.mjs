@@ -57,7 +57,6 @@ export default {
           900: "#53555c",
           950: "#303136",
         },
-        white: "#f7f7f7",
       },
       fontFamily: { Baijamjuree: ["Bai Jamjuree", "sans-serif"] },
     },
