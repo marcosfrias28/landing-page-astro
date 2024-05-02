@@ -1,0 +1,32 @@
+---
+import { Image } from "astro:assets";
+interface Props {
+  logo?: ImageMetadata;
+  alt?: string;
+  loading?: "eager" | "lazy";
+  title: string;
+  description: string;
+  titleSize: "xl" | "2xl" | "3xl" | "4xl";
+}
+
+const { logo, alt, loading, title, description, titleSize } = Astro.props;
+---
+
+<article>
+  {
+    logo && (
+      <Image
+        loading={loading}
+        class:list={"my-0 mx-auto my-5"}
+        src={logo}
+        alt={alt}
+      />
+    )
+  }
+  <h2 class=`font-medium text-${titleSize} text-nandor-900 text-balance mb-4`>
+    {title}
+  </h2>
+  <p class="text-balance text-aluminium-700">
+    {description}
+  </p>
+</article>
