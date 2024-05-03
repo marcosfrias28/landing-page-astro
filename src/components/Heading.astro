@@ -2,30 +2,27 @@
 import Image from "../components/Image.astro";
 
 interface Props {
+  class?: string;
   logo?: string;
   alt?: string;
   loading?: "eager" | "lazy";
   title: string;
   description: string;
-  titleSize: string;
 }
 
-const { logo, alt, loading, title, description, titleSize } = Astro.props;
+const { logo, alt, loading, title, description } = Astro.props;
 ---
 
-<text class="">
+<text class={`${Astro.props.class}`}>
   {
     logo && (
       <Image loading={loading} class="mx-auto my-8" src={logo} alt={alt} />
     )
   }
-  <h2
-    style=`font-size: ${titleSize};`
-    class=`font-medium text-nandor-700 text-wrap mb-4`
-  >
+  <h2 class=`font-medium text-nandor-700 text-wrap mb-4`>
     {title}
   </h2>
-  <p class="text-pretty text-aluminium-500 text-[16px]">
+  <p class="text-pretty text-aluminium-500 text-[16px] max-w-2xl mx-auto">
     {description}
   </p>
 </text>

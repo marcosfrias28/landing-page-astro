@@ -10,18 +10,18 @@ import Features from "../components/Features.astro";
 <Layout title="Welcome to Astro.">
   <div
     aria-label="Background Image"
-    class="absolute inset-0 -z-10 bg-contain bg-[url(/bg-header-mobile.png)] sm:bg-[url(/bg-header-desktop.png)] bg-no-repeat"
+    class="absolute inset-0 -z-10 bg-contain bg-[url(/bg-header-mobile.png)] md:bg-[url(/bg-header-desktop.png)] bg-no-repeat"
   >
   </div>
   <main
-    class="text-center text-balance max-w-[375px] md:max-w-[1440px] mx-auto my-0 px-7"
+    class="text-center text-balance my-0 px-7 flex flex-col items-center justify-center mx-auto w-full"
   >
     <Intro />
     <Features />
     <section class="my-20">
       <Heading
+        class="text-3xl"
         title="Access Clipboard anywhere"
-        titleSize="28px"
         description="Whether you’re on the go, or at your computer, you can access all your Clipboard snippets in a few simple clicks."
       />
       <Image
@@ -30,36 +30,40 @@ import Features from "../components/Features.astro";
         alt="iPhone and iPad images"
       />
     </section>
-    <section class="flex flex-col gap-10">
+    <section class="">
       <Heading
+        class="text-3xl"
         title="Supercharge your workflow"
-        titleSize="28px"
         description="We’ve got the tools to boost your productivity."
       />
-      <Heading
-        logo="/icon-blacklist.svg"
-        alt="Blacklist Icon to identify the section"
-        title="Create blacklists"
-        titleSize="24px"
-        description="Ensure sensitive information never makes its way to your clipboard by excluding certain sources."
-      />
-      <Heading
-        logo="/icon-text.svg"
-        alt="A\ text Icon to identify the section"
-        title="Plain text snippets"
-        titleSize="24px"
-        description="Remove unwanted formatting from copied text for a consistent look."
-      />
-      <Heading
-        logo="/icon-preview.svg"
-        alt="Sneak preview Icon to identify the section"
-        title="Sneak preview"
-        titleSize="24px"
-        description="Quick preview of all snippets on your Clipboard for easy access."
-      />
+      <div
+        class="flex flex-col md:flex-row my-20 gap-10 justify-center items-center"
+      >
+        <Heading
+          class="text-xl"
+          logo="/icon-blacklist.svg"
+          alt="Blacklist Icon to identify the section"
+          title="Create blacklists"
+          description="Ensure sensitive information never makes its way to your clipboard by excluding certain sources."
+        />
+        <Heading
+          class="text-xl"
+          logo="/icon-text.svg"
+          alt="A\ text Icon to identify the section"
+          title="Plain text snippets"
+          description="Remove unwanted formatting from copied text for a consistent look."
+        />
+        <Heading
+          class="text-xl"
+          logo="/icon-preview.svg"
+          alt="Sneak preview Icon to identify the section"
+          title="Sneak preview"
+          description="Quick preview of all snippets on your Clipboard for easy access."
+        />
+      </div>
     </section>
     <company-logos
-      class="my-32 flex flex-col justify-center items-center gap-16"
+      class="my-36 flex flex-wrap flex-col md:flex-row justify-center items-center gap-16 sm:gap-16 md:gap-24 w-auto transition-all"
     >
       <Image src="/logo-google.png" loading="lazy" alt="Company logo: Google" />
       <Image src="/logo-ibm.png" loading="lazy" alt="Company logo: IBM" />
@@ -77,8 +81,8 @@ import Features from "../components/Features.astro";
     </company-logos>
     <section class="mb-20 mt-32">
       <Heading
+        class="text-3xl"
         title="Clipboard for iOS and Mac OS"
-        titleSize="28px"
         description="Available for free on the App Store. Download for Mac or iOS, sync with iCloud and you’re ready to start adding to your clipboard."
       />
 
@@ -86,16 +90,16 @@ import Features from "../components/Features.astro";
     </section>
   </main>
   <footer
-    class="bg-[#f5f7f8] flex flex-col flex-wrap justify-center items-center py-14 gap-10"
+    class="bg-[#f5f7f8] flex flex-col md:flex-row flex-wrap justify-center items-center py-14 gap-10 md:gap-32 w-full md:justify-normal md:px-32 md:pt-20 md:pb-10"
   >
     <Image
-      class="mx-auto w-16"
+      class="mx-auto md:m-0 w-16"
       loading="eager"
       src="/logo.svg"
       alt="Logo C color Cyan"
     />
     <nav
-      class="flex flex-col sm:flex-row flex-wrap gap-6 justify-center items-center text-aluminium-800"
+      class="flex flex-col md:flex-row flex-wrap gap-6 md:gap-0 justify-center items-center text-aluminium-800 max-w-lg md:justify-start md:items-start md:*:mr-10"
     >
       <a href="#faqs">FAQs</a>
       <a href="#contact">Contact Us</a>
@@ -103,7 +107,7 @@ import Features from "../components/Features.astro";
       <a href="#kit">Press Kit</a>
       <a href="#guide">Install Guide</a>
     </nav>
-    <div class="flex gap-10">
+    <div class="flex gap-10 md:justify-self-end">
       <a aria-label="Link to Facebook Homepage" href="https://fb.com/">
         <Image
           loading="lazy"
