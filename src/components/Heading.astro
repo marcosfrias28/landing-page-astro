@@ -13,19 +13,19 @@ interface Props {
 const { logo, alt, loading, title, description, titleSize } = Astro.props;
 ---
 
-<text>
+<text class="">
   {
     logo && (
-      <Image loading={loading} className="mx-auto my-5" src={logo} alt={alt} />
+      <Image loading={loading} class="mx-auto my-8" src={logo} alt={alt} />
     )
   }
   <h2
     style=`font-size: ${titleSize};`
-    class=`font-medium text-nandor-900 text-balance mb-4`
+    class=`font-medium text-nandor-700 text-wrap mb-4`
   >
     {title}
   </h2>
-  <p class="text-pretty text-aluminium-500 text-[18px]">
+  <p class="text-pretty text-aluminium-500 text-[16px]">
     {description}
   </p>
 </text>

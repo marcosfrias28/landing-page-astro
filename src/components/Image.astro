@@ -3,9 +3,15 @@ interface Props {
   src: string;
   alt: string;
   loading?: "eager" | "lazy";
-  className?: string;
+  class?: string;
 }
-const { src, alt, loading, className } = Astro.props;
+const { src, alt, loading } = Astro.props;
 ---
 
-<img class={className} src={src} alt={alt} loading={loading} {...Astro.props} />
+<img
+  class={Astro.props.class}
+  src={src}
+  alt={alt}
+  loading={loading}
+  {...Astro.props}
+/>

@@ -17,109 +17,114 @@ import Features from "../components/Features.astro";
     class="text-center text-balance max-w-[375px] md:max-w-[1440px] mx-auto my-0 px-7"
   >
     <Intro />
-    <Features>
-      <section class="my-20">
-        <Heading
-          title="Access Clipboard anywhere"
-          titleSize="3xl"
-          description="Whether you’re on the go, or at your computer, you can access all your Clipboard snippets in a few simple clicks."
-        />
-        <Image src="/image-devices.webp" alt="iPhone and iPad images" />
-      </section>
-      <section class="flex flex-col gap-10">
-        <Heading
-          title="Supercharge your workflow"
-          titleSize="3xl"
-          description="We’ve got the tools to boost your productivity."
-        />
-        <Heading
-          logo="/icon-blacklist.svg"
-          alt="Blacklist Icon to identify the section"
-          title="Create blacklists"
-          titleSize="2xl"
-          description="Ensure sensitive information never makes its way to your clipboard by excluding certain sources."
-        />
-        <Heading
-          logo="/icon-text.svg"
-          alt="A\ text Icon to identify the section"
-          title="Plain text snippets"
-          titleSize="2xl"
-          description="Remove unwanted formatting from copied text for a consistent look."
-        />
-        <Heading
-          logo="/icon-preview.svg"
-          alt="Sneak preview Icon to identify the section"
-          title="Sneak preview"
-          titleSize="2xl"
-          description="Quick preview of all snippets on your Clipboard for easy access."
-        />
-      </section>
-      <company-logos
-        class="my-32 flex flex-col justify-center items-center gap-20"
-      >
-        <Image
-          src="/logo-google.png"
-          loading="lazy"
-          alt="Company logo: Google"
-        />
-        <Image src="/logo-ibm.png" loading="lazy" alt="Company logo: IBM" />
-        <Image
-          src="/logo-microsoft.png"
-          loading="lazy"
-          alt="Company logo: Microsoft"
-        />
-        <Image src="/logo-hp.png" loading="lazy" alt="Company logo: HP" />
-        <Image
-          src="/logo-vector-graphics.png"
-          loading="lazy"
-          alt="Company logo: VectorGraphics"
-        />
-      </company-logos>
-      <section class="mb-20 mt-32">
-        <Heading
-          title="Clipboard for iOS and Mac OS"
-          titleSize="4xl"
-          description="Available for free on the App Store. Download for Mac or iOS, sync with iCloud and you’re ready to start adding to your clipboard."
-        />
-
-        <ActionSection />
-      </section>
-    </Features>
-    <footer
-      class="bg-aluminium-100 flex flex-col flex-wrap justify-center items-center py-10 gap-10"
-    >
-      <Image
-        className="mx-auto w-16"
-        loading="eager"
-        src="/logo.svg"
-        alt="Logo C color Cyan"
+    <Features />
+    <section class="my-20">
+      <Heading
+        title="Access Clipboard anywhere"
+        titleSize="28px"
+        description="Whether you’re on the go, or at your computer, you can access all your Clipboard snippets in a few simple clicks."
       />
-      <nav
-        class="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-6 justify-center items-center text-aluminium-800"
-      >
-        <a href="#faqs">FAQs</a>
-        <a href="#contact">Contact Us</a>
-        <a href="#privacy">Privacy Policy</a>
-        <a href="#kit">Press Kit</a>
-        <a href="#guide">Install Guide</a>
-      </nav>
-      <div class="flex gap-6">
+      <Image
+        class="my-16"
+        src="/image-devices.webp"
+        alt="iPhone and iPad images"
+      />
+    </section>
+    <section class="flex flex-col gap-10">
+      <Heading
+        title="Supercharge your workflow"
+        titleSize="28px"
+        description="We’ve got the tools to boost your productivity."
+      />
+      <Heading
+        logo="/icon-blacklist.svg"
+        alt="Blacklist Icon to identify the section"
+        title="Create blacklists"
+        titleSize="24px"
+        description="Ensure sensitive information never makes its way to your clipboard by excluding certain sources."
+      />
+      <Heading
+        logo="/icon-text.svg"
+        alt="A\ text Icon to identify the section"
+        title="Plain text snippets"
+        titleSize="24px"
+        description="Remove unwanted formatting from copied text for a consistent look."
+      />
+      <Heading
+        logo="/icon-preview.svg"
+        alt="Sneak preview Icon to identify the section"
+        title="Sneak preview"
+        titleSize="24px"
+        description="Quick preview of all snippets on your Clipboard for easy access."
+      />
+    </section>
+    <company-logos
+      class="my-32 flex flex-col justify-center items-center gap-16"
+    >
+      <Image src="/logo-google.png" loading="lazy" alt="Company logo: Google" />
+      <Image src="/logo-ibm.png" loading="lazy" alt="Company logo: IBM" />
+      <Image
+        src="/logo-microsoft.png"
+        loading="lazy"
+        alt="Company logo: Microsoft"
+      />
+      <Image src="/logo-hp.png" loading="lazy" alt="Company logo: HP" />
+      <Image
+        src="/logo-vector-graphics.png"
+        loading="lazy"
+        alt="Company logo: VectorGraphics"
+      />
+    </company-logos>
+    <section class="mb-20 mt-32">
+      <Heading
+        title="Clipboard for iOS and Mac OS"
+        titleSize="28px"
+        description="Available for free on the App Store. Download for Mac or iOS, sync with iCloud and you’re ready to start adding to your clipboard."
+      />
+
+      <ActionSection />
+    </section>
+  </main>
+  <footer
+    class="bg-[#f5f7f8] flex flex-col flex-wrap justify-center items-center py-14 gap-10"
+  >
+    <Image
+      class="mx-auto w-16"
+      loading="eager"
+      src="/logo.svg"
+      alt="Logo C color Cyan"
+    />
+    <nav
+      class="flex flex-col sm:flex-row flex-wrap gap-6 justify-center items-center text-aluminium-800"
+    >
+      <a href="#faqs">FAQs</a>
+      <a href="#contact">Contact Us</a>
+      <a href="#privacy">Privacy Policy</a>
+      <a href="#kit">Press Kit</a>
+      <a href="#guide">Install Guide</a>
+    </nav>
+    <div class="flex gap-10">
+      <a aria-label="Link to Facebook Homepage" href="https://fb.com/">
         <Image
           loading="lazy"
           src="/icon-facebook.svg"
           alt="Facebook Logo SVG"
         />
+      </a>
+      <a aria-label="Link to Twitter Homepage" href="https://twitter.com/">
         <Image
           loading="lazy"
           src="/icon-twitter.svg"
           alt="Twitter Old Logo SVG"
         />
+      </a>
+      <a aria-label="Link to Instagram Homepage" href="https://instagram.com/">
         <Image
           loading="lazy"
           src="/icon-instagram.svg"
           alt="Instagram Logo SVG"
         />
-      </div>
-    </footer>
-  </main>
+      </a>
+    </div>
+  </footer>
 </Layout>
