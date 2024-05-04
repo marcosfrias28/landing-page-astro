@@ -1,0 +1,44 @@
+---
+import Image from "./Image.astro";
+---
+
+<footer
+  class="max-w-[1440px] md:mx-auto bg-[#f5f7f8] flex flex-col md:flex-row flex-wrap justify-center items-center py-14 gap-10 md:gap-32 w-full md:justify-between md:px-32 md:pt-20 md:pb-10"
+>
+  <Image
+    class="mx-auto md:m-0 w-16"
+    loading="eager"
+    src="/logo.svg"
+    alt="Logo C color Cyan"
+  />
+  <nav>
+    <ul
+      class="flex flex-col md:flex-row flex-wrap gap-6 md:gap-0 justify-center items-center text-aluminium-800 max-w-lg md:justify-start md:items-start md:*:mr-10"
+    >
+      <li><a href="#faqs">FAQs</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+      <li><a href="#privacy">Privacy Policy</a></li>
+      <li><a href="#kit">Press Kit</a></li>
+      <li><a href="#guide">Install Guide</a></li>
+    </ul>
+  </nav>
+  <div class="flex gap-10 md:justify-self-end">
+    <a aria-label="Link to Facebook Homepage" href="https://fb.com/">
+      <Image loading="lazy" src="/icon-facebook.svg" alt="Facebook Logo SVG" />
+    </a>
+    <a aria-label="Link to Twitter Homepage" href="https://twitter.com/">
+      <Image
+        loading="lazy"
+        src="/icon-twitter.svg"
+        alt="Twitter Old Logo SVG"
+      />
+    </a>
+    <a aria-label="Link to Instagram Homepage" href="https://instagram.com/">
+      <Image
+        loading="lazy"
+        src="/icon-instagram.svg"
+        alt="Instagram Logo SVG"
+      />
+    </a>
+  </div>
+</footer>
